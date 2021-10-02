@@ -4,11 +4,6 @@ import sys
 from git import Repo
 import requests
 
-
-
-print(cases.string)
-
-
 folder_path = "." if len(sys.argv) == 1 else sys.argv[1]
 for filename in os.listdir(folder_path):
     if filename.endswith('.html'):
