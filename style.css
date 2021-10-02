@@ -17,3 +17,7 @@ text-transform: uppercase;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+a{
+  font-size: 10pt;
+}
