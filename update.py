@@ -11,7 +11,7 @@ for filename in os.listdir(folder_path):
             soup = bs4.BeautifulSoup(file.read(), 'html.parser')
             file.close()
             tag = int(soup.find("h1", {"id": "answer_lockdown"}).string.strip()) + 1
-            soup.find("h1", {"id": "answer"}).string = str(tag)
+            soup.find("h1", {"id": "answer_lockdown"}).string = str(tag)
 
             URL = "https://www.health.govt.nz/our-work/diseases-and-conditions/covid-19-novel-coronavirus/covid-19-data-and-statistics/covid-19-current-cases"
             page = requests.get(URL)
