@@ -8,23 +8,6 @@ import requests
 # for filename in os.listdir(folder_path):
 #     if filename.endswith('.html'):
 
-file = open("index.html", "r")
-soup = bs4.BeautifulSoup(file.read(), 'html.parser')
-file.close()
-
-if sys.argv[1]:
-    update_day_count(soup)
-    print("update")
-else:
-    update_cases(soup)
-    print("update")
-
-
-file = open("index.html", "w", encoding='utf-8')
-
-# make it pretty
-file.write(str(soup.prettify()))
-file.close()
 
 def update_day_count(soup):
     tag = int(soup.find("h1", {"id": "answer_lockdown"}).string.strip()) + 1
@@ -38,4 +21,22 @@ def update_cases(soup):
     cases = tags.find("strong").string
     soup.find("h1", {"id": "answer_cases"}).string = cases
 
+
+file = open("index.html", "r")
+soup = bs4.BeautifulSoup(file.read(), 'html.parser')
+file.close()
+
+if len(sys.argv) == 1:
+    print("Days selected. Updating..")
+    update_day_count(soup)
+else:
+    update_cases(soup)
+    print("Cases selected. Updating..")
+
+
+file = open("index.html", "w", encoding='utf-8')
+
+# make it pretty
+file.write(str(soup.prettify()))
+file.close()
 print("Updated site and cleaned!")
