@@ -21,7 +21,7 @@ soup = bs4.BeautifulSoup(file.read(), 'html.parser')
 file.close()
 
 if len(sys.argv) == 1:
-    print("Days selected ⏱ Updating..")
+    print("Days selected  ⏱ Updating..")
     update_day_count(soup)
 else:
     update_cases(soup)
