@@ -3,10 +3,10 @@ body {
 font-family: arial, sans-serif;
 color: white; background: black;
 }
-#question {
+#question_cases, #question_lockdown {
 text-align: center;
 }
-#answer {
+#answer_cases, #answer_lockdown {
 text-align: center;
 font-weight: bold;
 font-size: 120pt;
