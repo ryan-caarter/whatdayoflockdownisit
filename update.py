@@ -31,4 +31,4 @@ file = open("index.html", "w", encoding='utf-8')
 
 file.write(str(soup.prettify()))
 file.close()
-print("Updated site 💯")
+print("Updated site 💯💯")
