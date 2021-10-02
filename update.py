@@ -3,12 +3,6 @@ import os
 import sys
 import requests
 
-# folder_path = "." if len(sys.argv) == 1 else sys.argv[1]
-#
-# for filename in os.listdir(folder_path):
-#     if filename.endswith('.html'):
-
-
 def update_day_count(soup):
     tag = int(soup.find("h1", {"id": "answer_lockdown"}).string.strip()) + 1
     soup.find("h1", {"id": "answer_lockdown"}).string = str(tag)
@@ -27,16 +21,14 @@ soup = bs4.BeautifulSoup(file.read(), 'html.parser')
 file.close()
 
 if len(sys.argv) == 1:
-    print("Days selected. Updating..")
+    print("Days selected ⏱ Updating..")
     update_day_count(soup)
 else:
     update_cases(soup)
-    print("Cases selected. Updating..")
-
+    print("Cases selected 🧳 Updating..")
 
 file = open("index.html", "w", encoding='utf-8')
 
-# make it pretty
 file.write(str(soup.prettify()))
 file.close()
-print("Updated site and cleaned!")
+print("Updated site 💯")
