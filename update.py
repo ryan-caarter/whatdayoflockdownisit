@@ -20,7 +20,7 @@ else:
     print("update")
 
 
-file = open(os.path.join(folder_path, filename), "w", encoding='utf-8')
+file = open("index.html", "w", encoding='utf-8')
 
 # make it pretty
 file.write(str(soup.prettify()))
