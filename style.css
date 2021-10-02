@@ -2,13 +2,18 @@
 body {
 font-family: arial, sans-serif;
 color: white; background: black;
+text-align: center;
 }
 #question_cases, #question_lockdown {
-text-align: center;
+
 }
 #answer_cases, #answer_lockdown {
-text-align: center;
 font-weight: bold;
 font-size: 120pt;
 text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
