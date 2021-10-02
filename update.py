@@ -3,10 +3,10 @@ import os
 import sys
 import requests
 
-folder_path = "." if len(sys.argv) == 1 else sys.argv[1]
-
-for filename in os.listdir(folder_path):
-    if filename.endswith('.html'):
+# folder_path = "." if len(sys.argv) == 1 else sys.argv[1]
+#
+# for filename in os.listdir(folder_path):
+#     if filename.endswith('.html'):
 
 file = open("index.html", "r")
 soup = bs4.BeautifulSoup(file.read(), 'html.parser')
