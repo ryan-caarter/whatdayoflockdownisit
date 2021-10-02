@@ -17,7 +17,7 @@ if sys.argv[1]:
     print("update")
 else:
     update_cases(soup)
-        print("update")
+    print("update")
 
 
 file = open(os.path.join(folder_path, filename), "w", encoding='utf-8')
