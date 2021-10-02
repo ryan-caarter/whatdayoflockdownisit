@@ -4,3 +4,4 @@ cd /Users/ryancarter/Documents/Programs/WDOLDII/whatdayoflockdownisit/
 git add *
 git commit -m "daily update"
 git push
+echo "It's been pushed 😁"
