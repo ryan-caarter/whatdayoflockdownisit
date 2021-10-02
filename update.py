@@ -11,8 +11,6 @@ for filename in os.listdir(folder_path):
             file.close()
             tag = int(soup.find("h1", {"id": "answer"}).string.strip()) + 1
             soup.find("h1", {"id": "answer"}).string = str(tag)
-            comment = bs4.Comment("\nsite by Ryan Carter\nryan.c4rter@gmail.com")
-            soup.head.insert(0, comment)
 
             file = open(os.path.join(folder_path, filename), "w", encoding='utf-8')
 
