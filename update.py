@@ -19,3 +19,5 @@ for filename in os.listdir(folder_path):
             # make it pretty
             file.write(str(soup.prettify()))
             file.close()
+
+print("Updated site and cleaned!")
