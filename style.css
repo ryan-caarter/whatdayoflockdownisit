@@ -14,6 +14,9 @@ font-size: 40pt;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+.grid2 {
+  margin-top: 100px;
+}
 
 a {
   font-size: 10pt;
