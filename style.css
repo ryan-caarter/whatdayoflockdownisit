@@ -1,7 +1,7 @@
 
 body {
 font-family: arial, sans-serif;
-color: white; background: black;
+color: black; background: white;
 text-align: center;
 }
 
@@ -18,9 +18,10 @@ a {
   font-size: 10pt;
 }
 
-#vax_link {
+#loi_link {
   font-size: 20pt;
   font-weight: bold;
+  color: black;
 }
 
 #title {
