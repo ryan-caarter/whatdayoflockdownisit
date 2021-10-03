@@ -4,20 +4,25 @@ font-family: arial, sans-serif;
 color: white; background: black;
 text-align: center;
 }
-#question_cases, #question_lockdown {
 
-}
-#answer_cases, #answer_lockdown {
+.answer {
 font-weight: bold;
-font-size: 120pt;
-text-transform: uppercase;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-a{
+a {
   font-size: 10pt;
+}
+
+#vax_link {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+#title {
+  font-size: 80pt;
 }
