@@ -1,21 +1,21 @@
 
 body {
-font-family: arial, sans-serif;
-color: black; background: white;
-text-align: center;
+  font-family: arial, sans-serif;
+  color: black; background: white;
+  text-align: center;
 }
 
 .answer {
-font-weight: bold;
-font-size: 40pt;
+  font-weight: bold;
+  font-size: 40pt;
 }
 
 .grid {
+  align-items:center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-}
-.grid2 {
-  margin-top: 110px;
+  background: #D7D7D7;
+  grid-gap: 1px;
 }
 
 a {
@@ -32,11 +32,6 @@ a {
   font-size: 80pt;
 }
 
-.grid {
-  background: #D7D7D7;
-  grid-auto-rows: 200px;
-  grid-gap: 1px;
-}
 
 .grid-item {
   background: white;
