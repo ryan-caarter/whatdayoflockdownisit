@@ -25,11 +25,9 @@ for filename in os.listdir(folder_path):
             # fix links that link to itself
             soup = bs4.BeautifulSoup(str(soup).replace(filename, "#"), 'html.parser')
 
-            # remove mobirise comments, add our auth tag
-            # for comment in soup.find_all(text=lambda e: isinstance(e, bs4.Comment)):
-            #     comment.extract()
-            # comment = bs4.Comment("\nsite by Ryan Carter & Lucas Quennell\nryan.c4rter@gmail.com\nlucasryanq@gmail.com")
-            # soup.head.insert(0, comment)
+            # remove automated comments
+            for comment in soup.find_all(text=lambda e: isinstance(e, bs4.Comment)):
+                comment.extract()
 
             # remove other branding tag
             [el.extract() for el in soup.select("[style='flex: 0 0 auto; margin:0; padding-right:1rem;']")]
