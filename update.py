@@ -18,8 +18,8 @@ def update_cases_and_vaccines(soup):
     second_dose = tags[3].string
     soup.find("h1", {"id": "answer_new_cases"}).string = new_cases
     soup.find("h1", {"id": "answer_active_cases"}).string = active_cases
-    soup.find("h1", {"id": "answer_first_vaccine"}).string = str(round(int(first_dose.replace(",",""))/5000000 * 100,2)) + "%"
-    soup.find("h1", {"id": "answer_second_vaccine"}).string = str(round(int(second_dose.replace(",",""))/5000000 * 100,2)) + "%"
+    soup.find("h1", {"id": "answer_first_vaccine"}).string = str(round(int(first_dose.replace(",",""))/5122600 * 100,2)) + "%"
+    soup.find("h1", {"id": "answer_second_vaccine"}).string = str(round(int(second_dose.replace(",",""))/5122600 * 100,2)) + "%"
 
 file = open("index.html", "r")
 soup = bs4.BeautifulSoup(file.read(), 'html.parser')
