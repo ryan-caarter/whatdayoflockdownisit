@@ -12,10 +12,10 @@ def update_cases_and_vaccines(soup):
     page = requests.get(URL)
     soup2 = bs4.BeautifulSoup(page.content, 'html.parser')
     tags = soup2.find_all("p", class_="number__value")
-    new_cases = tags[0].string
-    active_cases = tags[1].string
-    first_dose = tags[2].string
-    second_dose = tags[3].string
+    first_dose = tags[0].string
+    second_dose = tags[1].string
+    new_cases = tags[2].string
+    active_cases = tags[3].string
     soup.find("h1", {"id": "answer_new_cases"}).string = new_cases
     soup.find("h1", {"id": "answer_active_cases"}).string = active_cases
     soup.find("h1", {"id": "answer_first_vaccine"}).string = first_dose
